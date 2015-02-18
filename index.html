@@ -11,7 +11,38 @@
 
   <body>
     <div class="container">
-    
+      <h1>Movie Theatre</h1>
+      <form id="movie-info">
+        <div class="form-group">
+          <label for="movie">Select Movie:</label>
+          <select class="form-control">
+            <option value="hobbit">The Hobbit</option>
+            <option value="fifty">Fifty Shades of Grey</option>
+            <option value="still">Still Alice</option>
+            <option value="poetry">Poetry</option>
+            <option value="hunger">The Hunger Games: Mockingjay - Part 1</option>
+            <option value="night">Nightcrawler</option>
+            <option value="gone">Gone Girl</option>
+            <option value="big">Big Eyes</option>
+          </select>
+          <label for="movie-time">Select Movie Time:</label>
+          <select id="movie-time" class="form-control">
+            <option value="1pm">1pm</option>
+            <option value="3pm">3pm</option>
+            <option value="5pm">5pm</option>
+            <option value="8pm">8pm</option>
+            <option value="8:30pm">8:30pm</option>
+            <option value="9pm">9pm</option>
+            <option value="9:30pm">9:30pm</option>
+            <option value="10pm">10pm</option>
+            <option value="10:30pm">10:30pm</option>
+            <option value="11pm">11pm</option>
+          </select>
+          <label for="age">Enter Age:</label>
+          <input id="age" type="number" class="form-control" min="1" required>
+        </div>
+        <button type="submit" class="btn btn-success">Find Price!</button>
+      </form>
     </div>
   </body>
 </html>

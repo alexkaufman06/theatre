@@ -19,3 +19,27 @@ var Ticket = {
     return this.basePrice;
   }
 };
+
+
+$(document).ready(function() {
+  $("form#movie-info").submit(function(event) {
+    event.preventDefault();
+
+    var inputtedTitle = $("select#movie").val();
+    var inputtedTime = $("select#movie-time").val();
+    var inputtedAge = parseInt($("input#age").val());
+
+    var newTicket = Object.create(Ticket);
+    newTicket.movie = inputtedTitle;
+    newTicket.age = inputtedAge;
+    newTicket.time = inputtedTime;
+
+    $("input#movie").val("");
+    $("input#movie-time").val("");
+    $("input#age").val("");
+
+    $(".price").text(newTicket.price());
+    $("#price").show();
+
+  });
+});
